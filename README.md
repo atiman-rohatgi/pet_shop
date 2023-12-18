@@ -1,6 +1,6 @@
 #project pet_shop
 
-objective: this is a system for a hypothetical pet shop, that will help the owner keep track of each type of dog and cat and their montly licensing rate.
+objective: this is a system for a hypothetical pet shop, that will help the owner keep track of each type of dog and cat and their monthly licensing rate.
 
 functionality 
 
