@@ -16,6 +16,7 @@ functionality
               
               -the base header file is 'pet.hpp', with the 'cat.hpp' and 'dog.hpp' as their respective header files.
               
-              -the main code file is the 'main.cpp'.
+              -the main code file is the 'main.cpp'. 
+              - 
 
   language: C++
