@@ -1,22 +1,31 @@
-#project pet_shop
+# Pet Shop
 
-objective: this is a system for a hypothetical pet shop, that will help the owner keep track of each type of dog and cat and their monthly licensing rate.
+A small C++ program that calculates the monthly licensing fee for the pets in a hypothetical pet shop. It is meant as a simple demonstration of inheritance, polymorphism and pointers.
 
-functionality 
+## How it works
 
-              -the monthly rate is 'per pound' of body weight of each pet.
-              
-              -there are three pets 'Bob' who is '65lbs' dog,'Stan' who is '37lbs' dog and 'Tom' who is '12lbs' cat.
+The fee is charged per pound of body weight:
 
-              -The licensing rate for dogs is $2/lb and for cats is  $1.50/lb.
-              
-              -use of pointers and object classes has been done in this project.
+- Dogs: $2.00 per lb
+- Cats: $1.50 per lb
 
-              -here 'pvec' is a C++ vector for Pet pointers. 
-              
-              -the base header file is 'pet.hpp', with the 'cat.hpp' and 'dog.hpp' as their respective header files.
-              
-              -the main code file is the 'main.cpp'. 
-              - 
+The program creates three pets, prints each pet's fee, then prints the total:
 
-  language: C++
+- Bob, a 65 lb dog: $130
+- Stan, a 37 lb dog: $74
+- Tom, a 12 lb cat: $18
+- Total: $222
+
+## Files
+
+- `pet.hpp`: abstract base class `Pet`. It stores a name and weight and declares a virtual `CalculateFee()`.
+- `dog.hpp`: `Dog` class. Overrides `CalculateFee()` with the $2/lb rate.
+- `cat.hpp`: `Cat` class. Overrides `CalculateFee()` with the $1.50/lb rate.
+- `main.cpp`: stores the pets as `Pet*` pointers in a vector (`pvec`), prints the fees and total, then deletes the pets.
+
+## Build and run
+
+    g++ main.cpp -o pet_shop
+    ./pet_shop
+
+Language: C++
